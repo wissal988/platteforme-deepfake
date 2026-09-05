@@ -1,0 +1,13 @@
+# Environnement virtuel Python
+backend/.venv312/
+
+# Cache Python
+**/__pycache__/
+*.pyc
+
+# Node
+frontend/node_modules/
+
+# Autres
+.env
+.DS_Store

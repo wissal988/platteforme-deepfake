@@ -1,0 +1,18 @@
+{
+  "model_name": "attack_agnostic_fold1_lcnn_logmel",
+  "config": "configs/attack_agnostic_lcnn_logmel.yaml",
+  "manifest_dir": "manifests\\attack_agnostic\\fold_1",
+  "fold": 1,
+  "metrics": {
+    "eer_%": 1.333,
+    "auc": 0.9993,
+    "min_tdcf": 0.0667,
+    "accuracy": 0.9867,
+    "f1_spoof": 0.9867,
+    "f1_macro": 0.9867,
+    "threshold_used": 0.5669,
+    "n_bonafide": 300,
+    "n_spoof": 300,
+    "n_total": 600
+  }
+}

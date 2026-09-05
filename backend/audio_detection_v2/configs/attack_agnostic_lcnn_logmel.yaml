@@ -1,0 +1,48 @@
+data:
+  seed: 42
+  sample_rate: 16000
+  max_duration_seconds: 4.0
+  mono: true
+
+features:
+  type: "logmel"
+  n_mels: 80
+  n_fft: 512
+  hop_length: 160
+  win_length: 400
+  f_min: 20.0
+  f_max: 8000.0
+  normalize: true
+  augment: true
+
+model:
+  name: "lcnn"
+  input_channels: 1
+  hidden_dim: 256
+  dropout: 0.4
+  norm_type: "instance"
+
+training:
+  batch_size: 16
+  epochs: 16
+  num_workers: 0
+  learning_rate: 0.0002
+  weight_decay: 0.0002
+  loss: "bce"
+  balanced_sampling: true
+  label_smoothing: 0.05
+  patience: 6
+  min_delta: 0.03
+  scheduler_t0: 8
+
+augmentation:
+  enabled: true
+  noise_prob: 0.45
+  gain_prob: 0.55
+  shift_prob: 0.40
+  dropout_prob: 0.20
+  speed_prob: 0.25
+  codec_prob: 0.35
+
+evaluation:
+  metrics: ["eer", "auc", "balanced_accuracy", "f1_macro", "accuracy"]

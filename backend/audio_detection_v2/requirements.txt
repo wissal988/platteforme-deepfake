@@ -1,0 +1,33 @@
+# ============================================================
+# requirements.txt — Deepfake Audio Detection Pipeline
+# Python >= 3.10 | PyTorch >= 2.1
+# ============================================================
+# Référence de base : Kawa et al., "Attack Agnostic Dataset",
+# Interspeech 2022 — modernisé pour Python 3.10+ / PyTorch 2.x
+# ============================================================
+
+# --- Core Deep Learning ---
+torch>=2.1.0
+torchaudio>=2.1.0          # nouvelle API unifiée (load, transforms)
+
+# --- Audio Processing ---
+librosa>=0.10.1            # pour visualisation et analyse exploratoire
+soundfile>=0.12.1          # backend audio pour librosa
+numpy>=1.24.0
+
+# --- ML Utilities ---
+scikit-learn>=1.3.0        # pour métriques, split, normalisation
+scipy>=1.11.0              # pour calcul EER (signal processing)
+
+# --- Data / Config ---
+pandas>=2.0.0              # gestion des protocoles/metadata
+pyyaml>=6.0                # fichiers de configuration
+
+# --- Visualisation (notebooks) ---
+matplotlib>=3.7.0
+seaborn>=0.12.0
+jupyter>=1.0.0
+ipykernel>=6.25.0
+
+# --- Progress & Logging ---
+tqdm>=4.65.0
